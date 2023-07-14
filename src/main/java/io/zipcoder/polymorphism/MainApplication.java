@@ -17,10 +17,16 @@ public class MainApplication {
         //Ask how many pets they have
         System.out.println("How many pets do you have?");
         Integer numberOfPets = scanner.nextInt();
+
         List<Pet> petList = new ArrayList<>();
 
         //Get which kind of pet each one is, and their names.
         for (int i = 0; i <numberOfPets + 1; i++){
+
+            if (numberOfPets == 0){
+                System.out.println("No pets? Why are you even here? Goodbye.");
+            break;
+            }
 
             System.out.println(sb);
             String thePet = scanner.nextLine();
